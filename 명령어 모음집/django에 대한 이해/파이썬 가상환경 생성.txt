@@ -1,0 +1,29 @@
+파이썬 가상환경 만들기
+pip install virtualenv -> 가상환경 패키지 라이브러리 다운받기
+virtualenv (이름)(ex:myenv)
+
+실행하기 -> 생성한 디렉토리 내의 Scripts로 이동
+activate.bat
+
+가상환경 빠져나오기 -> deactivate
+
+파이썬 버전 확인하기-> python --version
+
+하지만 virtualenv는 동작이 불안정한 경우가 있다
+그래서 그거의 대처방안으로 만드는 방법은
+python -m venv (이름)(ex:myenv)
+실행 방법은 기존과 동일하다.
+
+패키지 목록 확인하기
+pip list
+패캐지 업그레이드
+pip install --upgrade <패키지이름>
+패키지 삭제
+pip uninstall <패키지이름>
+
+한 묶음으로 패키지들이 설치되게 하는 것(requerements.txt)는 내가 만든 이름
+pip freeze > requerements.txt
+
+원격 서버에서 이 파일을 이용해 패키지를 일괄설치하려면
+pip install -r requirements.txt
+

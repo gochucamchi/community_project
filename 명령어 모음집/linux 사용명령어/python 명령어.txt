@@ -1,0 +1,16 @@
+sudo apt-get update -> apt-get 업데이트하는 명령어
+sudo apt-get upgrade
+sudo apt install python3-pip
+
+python 다운로드 명령어
+sudo apt-get install python3.9
+
+python버전 확인
+python3 -V
+
+가상환경 만들기
+sudo apt install python3-venv
+python3 -m venv my-project-env(이름)
+
+가상환경 실행하기
+source bin/ativate

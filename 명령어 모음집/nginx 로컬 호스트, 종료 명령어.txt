@@ -1,0 +1,6 @@
+http://localhost/
+nginx.exe –s stop
+nginx -s stop ( 빠른 종료 )
+nginx -s quit ( 일반 종료 )
+nginx -s reload ( 재기동 )
+nginx -s reopen ( 로그파일 다시쓰기 시작 )

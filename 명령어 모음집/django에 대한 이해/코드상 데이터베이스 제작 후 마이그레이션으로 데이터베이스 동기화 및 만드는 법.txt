@@ -1,0 +1,49 @@
+코드상 데이터베이스 제작 후 마이그레이션으로 데이터베이스 동기화 및 만드는 법
+데이터베이스 제작방법
+models.py에서 -> 앱(content)의 migrations에 있다.
+from django.db import models
+
+class AA(models.Model):
+    content = models.TextField()
+
+마이그레이션 방법
+python manage.py makemigrations
+이러면 content\migrations라는 파일에 xx_inital파일이 생긴다
+
+python manage.py migrate를 치면 코드에 있던 객체가 db에 생기게된다.
+기본값으로 sqlite3로 만들어진다.
+
+그것과 관련된 설정은 settings.py에서 
+DATABASES = { ''' }
+이라고 된곳에 있다.
+
+기본값은
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+으로 sqlite3를 쓴다.
+
+pycham pro에서만 지원하는 database라는 기능이 있는데
+new(+)를 눌러서
+data source에서 sqlLite에서
+프로젝트 경로의 db.sqlite3를 실행시키면 구조를 편하게 볼 수 있다.
+
+데이터 불러오기
+from .models(현재 앱의 모델을 가르킴) import 데이터베이스
+
+feed_list = Feed.object.all()
+print(feed_list)
+return render(request, "main.html", context=dict(feed_list))
+dict는 딕셔너리형태 데이터임 컨텍스트는 딕셔너리랑 json데이터만 넣으면 된다.
+
+그리고 데이터를 이렇게 만들어서 넘기면 html에서 사용하는 방법은
+{{ }}로 한다
+그래서 {feed_list}하면 데이터가 넘어온다.
+
+그리고 for문은
+{% for feed in feeds %}
+{% endfor %}
+로 한다.

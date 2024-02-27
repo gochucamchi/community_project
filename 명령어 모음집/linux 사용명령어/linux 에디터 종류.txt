@@ -1,0 +1,2 @@
+linux 에디터 모음
+vi, vim, nano, gedit

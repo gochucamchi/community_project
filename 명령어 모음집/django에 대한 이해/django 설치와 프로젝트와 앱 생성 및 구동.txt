@@ -1,0 +1,22 @@
+--프로젝트 만들기--
+pip install Django -> python에서 장고를 설치한다
+django-admin startproject 이름(mysite) -> 장고로 프로젝트를 만든다.
+프로젝트 폴더안(mysite)경로에서 py manage.py runserver -> 서버를 구동한다.
+--프로젝트 만드는 것이 됨--
+
+---앱 만들기---
+python manage.py startapp polls(이름)
+--앱 만들기 끝--
+
+이후 앱을 등록해야한다
+settings.py에서 만든 앱 폴더이름을 그대로 넣어주면 된다.
+
+db세팅파일 만들기
+python manage.py makemigrations
+
+
+--db에 변경사항 저장하기--
+python manage.py migrate
+
+--서버 실행하기--
+python manage.py runserver
