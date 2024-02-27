@@ -7,7 +7,7 @@ git init 버전 관리를 위해서 디렉토리에 버전 관리륽 위한 메�
 git add . 저장할 목록을 추가하는 것
 그리고 git add .를 이용하면 .gitignore 파일을 참고하여 
 index로 넘길파일과 안 넘길 파일을 결정합니다.
-it add *를 이용하면 모든 파일을 index에 올릴 수 있습니다.
+git add *를 이용하면 모든 파일을 index에 올릴 수 있습니다.
 
 
 git log 내가 저장한 리스트를 보는 것
@@ -15,6 +15,7 @@ git status 현재 상태 확인 (내가 제일 많이 사용하는 명령어)
 git commit -m "message"저장 하는것 first commit
 
 git remote add origin 주소.git
+git push --set-upstream origin main(브랜치이름) 브랜치 설정
 git branch -M main
 git push -u origin master 변경 사항 원격 서버 업로드 (push)
 
