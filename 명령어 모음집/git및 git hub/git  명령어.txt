@@ -19,6 +19,8 @@ git push --set-upstream origin main(브랜치이름) 브랜치 설정
 git branch -M main
 git push -u origin master 변경 사항 원격 서버 업로드 (push)
 
+
+! [rejected] 오류 떴을 때
 git push origin +master(기존의 프로젝트 밀고 새로 저장하려는데 데이터 손실때문에 막힐 때 사용함)
 
 git reset c34c7f98d95529d2d62e706b8bce1965048df8be --hard 이전 버전의 git 저장으로

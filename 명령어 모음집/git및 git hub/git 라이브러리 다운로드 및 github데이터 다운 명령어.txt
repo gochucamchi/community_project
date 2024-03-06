@@ -1,0 +1,3 @@
+pip freeze > requirements.txt 라이브러리 리스트 및 묶음 만들기
+git clone 주소(복사 명령어)
+pip install -r requirements.txt 라이브러리 설치하기
